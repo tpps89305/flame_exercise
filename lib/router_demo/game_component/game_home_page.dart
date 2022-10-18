@@ -1,6 +1,6 @@
 import 'package:flame/components.dart';
 import 'package:flame/experimental.dart';
-import 'package:flame_exercise/router_demo/router_demo.dart';
+import 'package:flame_exercise/router_demo/game_component/router_demo.dart';
 import 'package:flutter/rendering.dart';
 
 class StartPage extends Component with HasGameRef<RouterDemo> {
@@ -23,12 +23,20 @@ class StartPage extends Component with HasGameRef<RouterDemo> {
         color: const Color(0xffadde6c),
         borderColor: const Color(0xffedffab),
       ),
+      _button2 = RoundedButton(
+        text: 'Level 2',
+        action: () => gameRef.router.pushNamed('level2'),
+        color: const Color(0xffdebe6c),
+        borderColor: const Color(0xfffff4c7),
+      ),
     ]);
   }
 
   late final TextComponent _logo;
 
   late final RoundedButton _button1;
+
+  late final RoundedButton _button2;
 
   @override
   void onGameResize(Vector2 size) {
@@ -37,6 +45,8 @@ class StartPage extends Component with HasGameRef<RouterDemo> {
     _logo.position = Vector2(size.x / 2, size.y / 3);
 
     _button1.position = Vector2(size.x / 2, _logo.y + 80);
+
+    _button2.position = Vector2(size.x / 2, _logo.y + 140);
   }
 }
 
