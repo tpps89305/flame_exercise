@@ -17,3 +17,5 @@ x86/
 !*.[Cc]ache/
 
 /flutter/generated_plugins.cmake
+/flutter/generated_plugin_registrant.cc
+/flutter/generated_plugin_registrant.h
