@@ -1,3 +1,4 @@
+import 'package:flame_exercise/overlay_demo/overlay_demo_page.dart';
 import 'package:flame_exercise/router_demo/router_page.dart';
 import 'package:flutter/material.dart';
 
@@ -8,20 +9,26 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Flame"),
+        title: const Text("Flame"),
       ),
-      body: Container(
-        child: ListView(
-          children: [
-            ListTile(
-              title: Text("Router"),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => RouterPage()));
-              },
-            )
-          ],
-        ),
+      body: ListView(
+        children: [
+          ListTile(
+            title: const Text("Router"),
+            subtitle: Text("如何在引擎內導覽各場景"),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => RouterPage()));
+            },
+          ),
+          ListTile(
+            title: const Text("Pause"),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => OverlayDemoPage()));
+            },
+          ),
+        ],
       ),
     );
   }
