@@ -44,6 +44,6 @@ class StartPage extends Component with HasGameRef<OverlayDemo> {
 
     _logo.position = Vector2(size.x / 2, size.y / 2);
 
-    _button1.position = Vector2(size.x / 2, _logo.y + 80);
+    _button1.position = Vector2((size.x - _button1.width) / 2, _logo.y + 80);
   }
 }

@@ -3,9 +3,10 @@ import 'package:flame_exercise/overlay_demo/game_component/overlay_demo.dart';
 import 'package:flutter/material.dart';
 
 class OverlayDemoPage extends StatelessWidget {
-  OverlayDemoPage({Key? key}) : super(key: key);
 
   final overlayGame = OverlayDemo();
+
+  OverlayDemoPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,10 @@ class OverlayDemoPage extends StatelessWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Text("Pause"),
+                    const Text(
+                      "Pause",
+                      style: TextStyle(fontSize: 20),
+                    ),
                     const SizedBox(height: 8),
                     ElevatedButton(
                       onPressed: () {

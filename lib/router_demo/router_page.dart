@@ -6,9 +6,27 @@ class RouterPage extends StatelessWidget {
   const RouterPage({super.key});
 
   @override
-  Widget build(Object context) {
-    return const SafeArea(
-      child: GameWidget.controlled(gameFactory: RouterDemo.new),
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        body: Stack(
+          children: [
+            const GameWidget.controlled(gameFactory: RouterDemo.new),
+            Align(
+              alignment: Alignment.bottomLeft,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(
+                  Icons.exit_to_app_rounded,
+                  color: Colors.white,
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

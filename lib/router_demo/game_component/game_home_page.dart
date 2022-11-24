@@ -44,9 +44,9 @@ class StartPage extends Component with HasGameRef<RouterDemo> {
 
     _logo.position = Vector2(size.x / 2, size.y / 3);
 
-    _button1.position = Vector2(size.x / 2, _logo.y + 80);
+    _button1.position = Vector2((size.x - _button1.width) / 2, _logo.y + 80);
 
-    _button2.position = Vector2(size.x / 2, _logo.y + 140);
+    _button2.position = Vector2((size.x - _button1.width) / 2, _logo.y + 140);
   }
 }
 

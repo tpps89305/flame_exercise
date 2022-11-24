@@ -15,14 +15,15 @@ class HomePage extends StatelessWidget {
         children: [
           ListTile(
             title: const Text("Router"),
-            subtitle: Text("如何在引擎內導覽各場景"),
+            subtitle: const Text("如何在引擎內導覽各場景"),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => RouterPage()));
+                  MaterialPageRoute(builder: (context) => const RouterPage()));
             },
           ),
           ListTile(
             title: const Text("Pause"),
+            subtitle: const Text("覆蓋遊戲畫面的選單"),
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => OverlayDemoPage()));
