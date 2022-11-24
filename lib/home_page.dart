@@ -1,3 +1,4 @@
+import 'package:flame_exercise/circles_example/circles_collision_page.dart';
 import 'package:flame_exercise/overlay_demo/overlay_demo_page.dart';
 import 'package:flame_exercise/router_demo/router_page.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +28,16 @@ class HomePage extends StatelessWidget {
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => OverlayDemoPage()));
+            },
+          ),
+          ListTile(
+            title: const Text("碰撞"),
+            subtitle: const Text("碰撞偵測示範"),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const CirclesCollisionPage()));
             },
           ),
         ],
