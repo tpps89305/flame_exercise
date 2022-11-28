@@ -1,6 +1,7 @@
 import 'package:flame_exercise/circles_example/circles_collision_page.dart';
 import 'package:flame_exercise/overlay_demo/overlay_demo_page.dart';
 import 'package:flame_exercise/router_demo/router_page.dart';
+import 'package:flame_exercise/tap_event_demo/tap_event_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -38,6 +39,16 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const CirclesCollisionPage()));
+            },
+          ),
+          ListTile(
+            title: const Text("TapCallbacks"),
+            subtitle: const Text("點擊事件示範"),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const TapEventPage()));
             },
           ),
         ],
