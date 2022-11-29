@@ -1,5 +1,6 @@
 import 'package:flame_exercise/circles_example/circles_collision_page.dart';
 import 'package:flame_exercise/drag_event_demo/drag_event_page.dart';
+import 'package:flame_exercise/gesture_input_demo/gesture_input_page.dart';
 import 'package:flame_exercise/overlay_demo/overlay_demo_page.dart';
 import 'package:flame_exercise/router_demo/router_page.dart';
 import 'package:flame_exercise/tap_event_demo/tap_event_page.dart';
@@ -60,6 +61,16 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const DragEventPage()));
+            },
+          ),
+          ListTile(
+            title: const Text("GestureInput"),
+            subtitle: const Text("手勢輸入示範"),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const GestureInputPage()));
             },
           ),
         ],
