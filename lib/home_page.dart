@@ -1,4 +1,5 @@
 import 'package:flame_exercise/circles_example/circles_collision_page.dart';
+import 'package:flame_exercise/drag_event_demo/drag_event_page.dart';
 import 'package:flame_exercise/overlay_demo/overlay_demo_page.dart';
 import 'package:flame_exercise/router_demo/router_page.dart';
 import 'package:flame_exercise/tap_event_demo/tap_event_page.dart';
@@ -49,6 +50,16 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const TapEventPage()));
+            },
+          ),
+          ListTile(
+            title: const Text("DragCallbacks"),
+            subtitle: const Text("拖曳事件示範"),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const DragEventPage()));
             },
           ),
         ],
