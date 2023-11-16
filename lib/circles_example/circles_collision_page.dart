@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flame/game.dart';
 
 class CirclesCollisionPage extends StatelessWidget {
-  const CirclesCollisionPage({Key? key}) : super(key: key);
+  const CirclesCollisionPage({super.key});
 
   @override
   Widget build(BuildContext context) {

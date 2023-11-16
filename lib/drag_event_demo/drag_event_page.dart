@@ -3,7 +3,7 @@ import 'package:flame_exercise/drag_event_demo/game_component/drag_event_demo.da
 import 'package:flutter/material.dart';
 
 class DragEventPage extends StatelessWidget {
-  const DragEventPage({Key? key}) : super(key: key);
+  const DragEventPage({super.key});
 
   @override
   Widget build(BuildContext context) {

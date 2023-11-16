@@ -2,11 +2,11 @@ import 'dart:developer';
 import 'dart:math' hide log;
 
 import 'package:flame/components.dart';
-import 'package:flame/experimental.dart';
+import 'package:flame/events.dart';
 import 'package:flame/game.dart';
 import 'package:flutter/rendering.dart';
 
-class DragEventDemo extends FlameGame with HasDraggableComponents {
+class DragEventDemo extends FlameGame with DragCallbacks {
   @override
   Future<void> onLoad() async {
     addAll([

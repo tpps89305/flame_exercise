@@ -1,11 +1,11 @@
 import 'package:flame/components.dart';
-import 'package:flame/experimental.dart';
+import 'package:flame/events.dart';
 import 'package:flame/game.dart';
 import 'package:flame/image_composition.dart';
 import 'package:flutter/rendering.dart';
 import 'dart:developer';
 
-class GestureInputDemo extends FlameGame with HasDraggableComponents {
+class GestureInputDemo extends FlameGame with DragCallbacks {
   late SpriteComponent player;
 
   @override
@@ -37,7 +37,7 @@ class DragTarget extends PositionComponent with DragCallbacks {
     required this.onDragUp,
   }) : super(anchor: Anchor.center);
 
-  final _rectPaint = Paint()..color = Color.fromARGB(135, 219, 198, 224);
+  final _rectPaint = Paint()..color = const Color.fromARGB(135, 219, 198, 224);
 
   Vector2? dragStartPosition;
   Vector2? dragEndPosition;

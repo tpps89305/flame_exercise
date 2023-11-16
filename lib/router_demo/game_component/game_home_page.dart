@@ -1,5 +1,5 @@
 import 'package:flame/components.dart';
-import 'package:flame/experimental.dart';
+import 'package:flame/events.dart';
 import 'package:flame_exercise/router_demo/game_component/router_demo.dart';
 import 'package:flutter/rendering.dart';
 

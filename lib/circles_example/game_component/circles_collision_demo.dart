@@ -1,6 +1,6 @@
 import 'package:flame/components.dart';
+import 'package:flame/events.dart';
 import 'package:flame/game.dart';
-import 'package:flame/input.dart';
 import 'package:flame_exercise/circles_example/game_component/my_collidable.dart';
 
 class CirclesCollisionDemo extends FlameGame
@@ -12,6 +12,6 @@ class CirclesCollisionDemo extends FlameGame
 
   @override
   void onTapDown(TapDownInfo info) {
-    add(MyCollidable(info.eventPosition.game));
+    add(MyCollidable(info.eventPosition.global));
   }
 }

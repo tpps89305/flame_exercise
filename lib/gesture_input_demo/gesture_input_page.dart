@@ -3,7 +3,7 @@ import 'package:flame_exercise/gesture_input_demo/game_component/gesture_input_d
 import 'package:flutter/material.dart';
 
 class GestureInputPage extends StatelessWidget {
-  const GestureInputPage({Key? key}) : super(key: key);
+  const GestureInputPage({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flame/game.dart';
 
 class TapEventPage extends StatelessWidget {
-  const TapEventPage({Key? key}) : super(key: key);
+  const TapEventPage({super.key});
 
   @override
   Widget build(BuildContext context) {
